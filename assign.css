@@ -2,15 +2,17 @@ body{
 	
 	margin: 0px;
 	padding: 0px;
-	font-family: sans-serif;
 	display: flex;
 	flex-direction:column;
-	background-image: url('portfoliobg.jpg');
+	background-image: linear-gradient(blue,white);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
+	
 
 }
+/*menu for all*/
+
 nav{
 	background:black;
 	display: flex;
@@ -21,6 +23,12 @@ nav .logo{
 	text-decoration: none;
 	color: white;
 	font-size: 30px;
+	font-family: fantasy;
+	animation: change 4s linear infinite ;
+}
+@keyframes change{
+	from{background-image: linear-gradient(blue,white);}
+	to{background-image: linear-gradient(red,white);}
 }
 nav ul{
 	list-style: none;
@@ -31,6 +39,7 @@ nav ul li{
 
 }
 nav ul li a{
+	font-family: cursive;
 	text-decoration: none;
 	margin: 5px;
 	padding: 5px;
@@ -44,11 +53,12 @@ nav ul li a:hover{
 	color: black;
 
 }
+/* Home page*/
 section{
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	height: 90vh;
+	
 	
 }
 section main{
@@ -59,27 +69,24 @@ section main{
 	justify-content: center;
 	align-items: center;
 }
-.photos{
-	height: all;
-	display: block;
-	
-}
+
 .int{	
 	
 	font-size: 30px;
 	font-family: sans-serif;
-	
-
 
 }
 
 
 .int img{
 	width: 200px;
+	border-radius: 50%;
 
 }
+/*Animation also used to display Quoet.*/
 .int p{
-	font-size: 60px;
+	font-family: cursive;
+	font-size: 40px;
 	justify-content: center;
 	box-shadow: 2px 3px 3px;
 	animation: type 3s;
@@ -89,13 +96,19 @@ section main{
 }
 @keyframes type{
 	0%{width: 0%;}
-	30%{ width: 30%;}
-	70%{width: 70%;}
+	30%{ width: 20%;}
+	70%{width: 30%;}
+	100%{width:40% }
 	
 
 }
 
 /*portfolio image*/
+.photos{
+	height: all;
+	display: block;
+	
+}
 main .photos{
 	display: block;
 }
@@ -109,6 +122,8 @@ main .photos{
 	height: 120px;
 	margin: 10px;
 	box-shadow: 3px 4px 4px black;
+	
+
 
 }
 .gallary .image2 img{
@@ -116,7 +131,6 @@ main .photos{
 	height: 150px;
 	margin: 10px;
 	box-shadow: 3px 4px 4px black;
-	transition: 3s;
 
 }
 .gallary .image3 img{
@@ -124,6 +138,8 @@ main .photos{
 	height: 120px;
 	margin: 10px;
 	box-shadow: 3px 4px 4px black;
+	
+
 
 }
 .gallary .image4 img{
@@ -131,9 +147,10 @@ main .photos{
 	height: 130px;
 	margin: 10px;
 	box-shadow: 3px 4px 4px black;
-	transition: 3s;
+
 
 }
+
 .gallary2{
 	display: flex;
 	justify-content: center;
@@ -145,7 +162,7 @@ main .photos{
 	height: 120px;
 	margin: 10px;
 	box-shadow: 3px 4px 4px black;
-	transition: 3s;
+	
 
 }
 .gallary2 .image6 img{
@@ -162,7 +179,7 @@ main .photos{
 	height: 150px;
 	margin: 10px;
 	box-shadow: 2px 3px 3px black;
-	transition: 3s;
+	
 
 
 }
@@ -173,6 +190,7 @@ main .photos{
 	box-shadow: 3px 4px 4px black;
 
 }
+
 .contact{
 	display: flex;
 	justify-content: center;
@@ -180,6 +198,7 @@ main .photos{
 	text-align: center;
 
 }
+/*Contact page design.*/
 .contact img{
 	width: 150px;
 }
@@ -188,6 +207,7 @@ main .photos{
 	width: 6px;
 	background: white;
 }
+/* a card is added*/
 .contact .card{
 	display: flex;
 	margin: 10px;
@@ -195,6 +215,7 @@ main .photos{
 	box-shadow: 2px 3px 3px ;
 	background: orange;
 }
+/* Form created*/
 form{
 	flex: 1;
 	
@@ -213,6 +234,11 @@ form{
 	flex: 1;
 
 }
+.msg p{
+	font-family: cursive;
+	font-size: 20px;
+	animation: change 3s linear infinite;
+}
 .msg textarea{
 	height: 150px;
 	width: 300px;
@@ -223,6 +249,7 @@ form{
 	border-radius: 7px 7px 7px 7px;
 }
 
+/* CV page begins.*/
 
 .cv{
 	display: flex;
@@ -231,7 +258,8 @@ form{
 }
 .cv img{
 	width: 200px;
-	margin: 7px;
+	margin: auto;
+	border-radius: 50%;
 }
 .cv .terms{
 	display: flex;
@@ -242,13 +270,16 @@ form{
 .cv .terms .skills{
 	flex: 1;
 	box-shadow: 2px 3px 3px ;
+	font-family: cursive;
 }
 .cv .terms .education{
 	flex: 1;
+	font-family: cursive;
 }
 .cv .terms .work{
 	flex: 1;
 	box-shadow: 2px 3px 3px ;
+	font-family: cursive;
 }
 
 .cv .term2{
@@ -257,14 +288,46 @@ form{
 	align-items: center;
 	margin-top: 8px;
 
+
 }
 .cv .term2 .interest{
 	 flex: 1;
+	 font-family: cursive;
 }
 .cv .term2 .hobby{
 	flex: 1;
+	font-family: cursive;
 	
 }
+/* This one is for editing my skills.*/
+.language{
+	box-shadow: 2px 3px 3px ;
+
+}
+.java,.javascript,.php{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	font-family: cursive;
+
+}
+
+ .know{
+	width: 100px;
+	height: 10px;
+	background: black;
+	border-radius: 0px 0px 3px 3px;
+	
+}
+.didnt{
+	width: 27px;
+	height: 10px;
+	background: white;
+	
+	border-radius: 3px 3px;
+
+}
+/* Necessary footer area.*/
 
 footer{
 	background: black;
@@ -273,10 +336,11 @@ footer{
 
 }
 footer img{
-	border-radius: 50px 50px 50px 50px;
+	border-radius: 50%;
 	width: 200px;
 }
 footer .about-text{
+	font-family: cursive;
 	color: white;
 	text-align: center;
 }
