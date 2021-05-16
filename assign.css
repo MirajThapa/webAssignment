@@ -11,69 +11,92 @@ body{
 	
 
 }
+header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding:10px;
+	font-family: fantasy;
+	font-size: 25px;
+	animation: change 2s linear infinite;
+}
 /*menu for all*/
 
 nav{
-	background:black;
-	display: flex;
-	justify-content: space-between;
-	text-align: center;
-}
-nav .logo{
-	text-decoration: none;
-	color: white;
-	font-size: 30px;
-	font-family: fantasy;
-	animation: change 4s linear infinite ;
-}
-@keyframes change{
-	from{background-image: linear-gradient(blue,white);}
-	to{background-image: linear-gradient(red,white);}
+
 }
 nav ul{
-	list-style: none;
+	display: flex;
+	justify-content: center;
+	background-color: black;
+	padding: 14px;
+	margin: 0px;
+
+
 }
 nav ul li{
-	display: inline-block;
-	margin-left: 15px;
+	list-style: none;
+	margin: 5px;
 
 }
 nav ul li a{
-	font-family: cursive;
 	text-decoration: none;
-	margin: 5px;
-	padding: 5px;
 	color: white;
+	font-family: cursive;
+	padding: 10px 10px;
+	margin: 5px;
 
 }
 nav ul li a:hover{
-	border: 2px solid white;
-	border-radius:20px 20px 20px 20px; 
-	background: white;
+	border-radius: 2px 3px 3px 3px;
+	background-color: white;
 	color: black;
+}
+#checkbox {
+	display: none;
+}
+.box{
+	background-color: black;
+	border-bottom: 2px solid white;
+	color: white;
+	display: flex;
+	justify-content: flex-end;
+	padding: 7px;
 
 }
-/* Home page*/
-section{
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	
-	
-}
-section main{
-	
-	height: 82vh;
+.box label{
+	background-color: white;
+	height: 40px;
+	width: 50px;
+	color: black;
+	cursor: pointer;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
 }
+.box label span{
+	background-color: black;
+	height: 4px;
+	width: 80%;
+	margin: 3px;
+
+
+}
+.box{
+	display: none;
+}
+
+/* Home page*/
+
 
 .int{	
 	
 	font-size: 30px;
 	font-family: sans-serif;
+	justify-content: center;
+	align-items: center;
 
 }
 
@@ -105,7 +128,7 @@ section main{
 
 /*portfolio image*/
 .photos{
-	height: all;
+
 	display: block;
 	
 }
@@ -239,6 +262,10 @@ form{
 	font-size: 20px;
 	animation: change 3s linear infinite;
 }
+@keyframes change{
+	from{background-image: linear-gradient(yellow,white);}
+	to{background-image: linear-gradient(red,white);}
+}
 .msg textarea{
 	height: 150px;
 	width: 300px;
@@ -358,6 +385,26 @@ footer .space{
    body{
    	display: block;
    }
+	nav ul{
+	flex-direction: column;
+	display: none;
+
+
+	
+  }
+nav ul li a{
+	margin: 10px;
+	
+	
+}
+
+ #checkbox:checked + ul {
+	display: block;
+	 }
+
+	 .box{
+	 	display: flex;
+	 }
    section{
    	display: block;
    }
