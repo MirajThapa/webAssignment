@@ -1,127 +1,119 @@
 body{
-	
-	margin: 0px;
+	margin: 0px;    
 	padding: 0px;
-	display: flex;
-	flex-direction:column;
-	background-image: linear-gradient(blue,white);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
+	display: flex;/* to display body child horizontally*/
+	flex-direction:column;/*to display body child vertically*/
+	background-image: linear-gradient(black,white);/*background image created */
+	background-repeat: no-repeat;/* no repetation of background*/
+	background-attachment: fixed;/*background can't be moved */
+	background-size: cover;/*to cover all the body  */
 	
-
 }
 header{
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding:10px;
-	font-family: fantasy;
-	font-size: 25px;
-	animation: change 2s linear infinite;
+	justify-content: center;/* arranging header in center vertically */
+	align-items: center;/*arranging header in center horizontally */
+	padding:7px;/* arranging space*/
+	font-family: sans-serif;/*giving style to letters */
+	font-size: 25px;/*giving font size */
+	color: white;/*color of letters */
+
+	animation: change 2s linear infinite;/* animation is done*/
+	animation-duration: 4s; /*duration of animation is given */
 }
 /*menu for all*/
 
-nav{
-
-}
 nav ul{
-	display: flex;
-	justify-content: center;
-	background-color: black;
+	display: flex;/*to display body child horizontally */
+	justify-content: center;/*arranging header in center vertically */
+	background-color: black;/*background color for menu is given */
 	padding: 14px;
 	margin: 0px;
 
 
 }
 nav ul li{
-	list-style: none;
+	list-style: none;/* dot is removed*/
 	margin: 5px;
 
 }
 nav ul li a{
-	text-decoration: none;
-	color: white;
-	font-family: cursive;
+	text-decoration: none;/* underline is romeved*/
+	color: white;/*color of pages is white */
+	font-family: cursive;/*cursive style is used */
 	padding: 10px 10px;
 	margin: 5px;
 
 }
 nav ul li a:hover{
-	border-radius: 2px 3px 3px 3px;
-	background-color: white;
-	color: black;
+	border-radius: 2px 3px 3px 3px;/* border is curved*/
+	background-color: white;/*background becomes white */
+	color: black;/*color of text becomes black */
 }
 #checkbox {
-	display: none;
+	display: none;/*checkbox is removed for desktop version */
 }
 .box{
-	background-color: black;
-	border-bottom: 2px solid white;
-	color: white;
-	display: flex;
-	justify-content: flex-end;
-	padding: 7px;
+	background-color: black;/*background is given black */
+	border-bottom: 2px solid white;/* */
+	color: white;/*color becomes white */
+	display: flex;/* flex is used to set them horizontally*/
+	justify-content: flex-end;/*from left the flexbox started */
+	padding: 7px;/* padding is given*/
 
 }
 .box label{
-	background-color: white;
-	height: 40px;
-	width: 50px;
-	color: black;
-	cursor: pointer;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	background-color: white;/*background is set to white */
+	height: 40px;/*height of box */
+	width: 50px;/* width of box*/
+	color: black;/* color is set to black*/
+	cursor: pointer;/*pointer occours inside it */
+	display: flex;/*flex is used to set them horizontally */
+	flex-direction: column;/*flex is used to set them vertically */
+	justify-content: center;/* arranging header in center vertically*/
+	align-items: center;/*arranging header in center horizontally */
+
 
 }
 .box label span{
-	background-color: black;
-	height: 4px;
-	width: 80%;
+	background-color: black;/*background of span */
+	height: 4px;/*height of lines in hamburgur menu */
+	width: 80%;/* width of lines in hamburgur menu*/
 	margin: 3px;
+
 
 
 }
 .box{
-	display: none;
+	display: none;/*doesn't appear in desktop version */
 }
 
 /* Home page*/
 
-
-.int{	
-	
-	font-size: 30px;
-	font-family: sans-serif;
-	justify-content: center;
-	align-items: center;
-
+.int{
+	text-align: center;
 }
-
 
 .int img{
-	width: 200px;
-	border-radius: 50%;
+	width: 200px;/* width of image*/
+	border-radius: 50%;/*image rounded */
+	
 
 }
-/*Animation also used to display Quoet.*/
+
 .int p{
-	font-family: cursive;
+	font-family: cursive;/*letters in cursive form */
 	font-size: 40px;
-	justify-content: center;
-	box-shadow: 2px 3px 3px;
-	animation: type 3s;
-	overflow: hidden;
+	animation: type 4s linear infinite;/*Animation also used to display Quoet.*/
+	overflow: hidden;/*to hid the unnecessary part during animation */
+	
 
 	
 }
 @keyframes type{
-	0%{width: 0%;}
-	30%{ width: 20%;}
-	70%{width: 30%;}
-	100%{width:40% }
+	0%{color:white;}
+	
+	100%{color:black;}
 	
 
 }
@@ -129,14 +121,14 @@ nav ul li a:hover{
 /*portfolio image*/
 .photos{
 
-	display: block;
+	display: flex;
+	text-align: center;
 	
 }
-main .photos{
-	display: block;
-}
+
 .gallary{
-	display: flex;
+	flex: 1;
+	display: block;
 	justify-content: center;
 }
 
@@ -175,7 +167,8 @@ main .photos{
 }
 
 .gallary2{
-	display: flex;
+	flex: 1;
+	display: block;
 	justify-content: center;
 }
 
@@ -189,19 +182,19 @@ main .photos{
 
 }
 .gallary2 .image6 img{
-	width: 140px;
-	height: 140px;
-	margin: 10px;
-	box-shadow: 3px 4px 4px black;
+	width: 140px;/*width of an image */
+	height: 140px;/*height of an image */
+	margin: 10px;/*to seprate image apart */
+	box-shadow: 3px 4px 4px black;/* giving shadow to image*/
 
 
 
 }
 .gallary2 .image7 img{
-	width: 140px;
-	height: 150px;
-	margin: 10px;
-	box-shadow: 2px 3px 3px black;
+	width: 140px;/*width of an image */
+	height: 150px;/*height of an image */
+	margin: 10px;/*to seprate image apart */
+	box-shadow: 2px 3px 3px black;/*giving shadow to image */
 	
 
 
@@ -240,8 +233,7 @@ main .photos{
 }
 /* Form created*/
 form{
-	flex: 1;
-	
+	flex: 1;	
 	text-align: center;
 	display: flex;
 	
@@ -260,11 +252,15 @@ form{
 .msg p{
 	font-family: cursive;
 	font-size: 20px;
+	color: white;
 	animation: change 3s linear infinite;
 }
 @keyframes change{
-	from{background-image: linear-gradient(yellow,white);}
-	to{background-image: linear-gradient(red,white);}
+
+	0%   {background-color: black;}
+  25%  {background-color: #272829;}
+  50%  {background-color: black;}
+  100% {background-color: #272829;}
 }
 .msg textarea{
 	height: 150px;
@@ -388,14 +384,18 @@ footer .space{
 	nav ul{
 	flex-direction: column;
 	display: none;
-
-
-	
+	background-color: linear-gradient(black,white);	
   }
+
 nav ul li a{
 	margin: 10px;
+	background-color: white;
+	color: black;
 	
-	
+}
+nav ul li{
+	padding: 10px;
+
 }
 
  #checkbox:checked + ul {
@@ -409,6 +409,9 @@ nav ul li a{
    	display: block;
    }
    footer{
+   	display: block;
+   }
+   .photos{
    	display: block;
    }
    .gallary{
