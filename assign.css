@@ -1,8 +1,7 @@
 body{
 	margin: 0px;    
 	padding: 0px;
-	display: flex;/* to display body child horizontally*/
-	flex-direction:column;/*to display body child vertically*/
+	display: grid;
 	background-image: linear-gradient(black,white);/*background image created */
 	background-repeat: no-repeat;/* no repetation of background*/
 	background-attachment: fixed;/*background can't be moved */
@@ -10,18 +9,22 @@ body{
 	
 }
 header{
-	display: flex;
-	justify-content: center;/* arranging header in center vertically */
-	align-items: center;/*arranging header in center horizontally */
-	padding:7px;/* arranging space*/
+	grid-row: 1/2;
+	grid-column: 1/3;
+	
+	padding:7px;
 	font-family: sans-serif;/*giving style to letters */
-	font-size: 25px;/*giving font size */
-	color: white;/*color of letters */
+	font-size: 25px;
+	color: white;
 
 	animation: change 2s linear infinite;/* animation is done*/
 	animation-duration: 4s; /*duration of animation is given */
 }
 /*menu for all*/
+nav{
+	grid-row: 2/3;
+	grid-column:1/3; 
+}
 
 nav ul{
 	display: flex;/*to display body child horizontally */
@@ -63,10 +66,11 @@ nav ul li a:hover{
 
 }
 .box label{
-	background-color: white;/*background is set to white */
-	height: 40px;/*height of box */
-	width: 50px;/* width of box*/
-	color: black;/* color is set to black*/
+	background-color: white;
+	height: 40px;
+	width: 50px;
+	border-radius: 2px 2px 2px 2px;
+	color: black;
 	cursor: pointer;/*pointer occours inside it */
 	display: flex;/*flex is used to set them horizontally */
 	flex-direction: column;/*flex is used to set them vertically */
@@ -88,9 +92,13 @@ nav ul li a:hover{
 	display: none;/*doesn't appear in desktop version */
 }
 
-/* Home page*/
 
-.int{
+
+main .int{
+	grid-row: 3/4;
+	grid-column: 2/3;
+
+
 	text-align: center;
 }
 
@@ -110,61 +118,53 @@ nav ul li a:hover{
 
 	
 }
-@keyframes type{
+@keyframes type{ /* animation on letters which randomly changes from white to black*/
 	0%{color:white;}
 	
 	100%{color:black;}
 	
-
+/* */
 }
 
 /*portfolio image*/
-.photos{
-
-	display: flex;
+.photos{ /* Two columns were created*/
+	grid-row: 3/4;
 	text-align: center;
+	display: flex;
+
+
 	
 }
 
-.gallary{
-	flex: 1;
-	display: block;
-	justify-content: center;
+.gallary{ /* Photos are placed in row form*/
+	
+	display: flex;
+	   
 }
 
-.gallary .image1 img{
-	width: 140px;
-	height: 120px;
+.gallary .image1 { /* size of an image determined*/
+	width: 230px;
+	height: 220px;
+	background-color: black;
+	color: white;
 	margin: 10px;
 	box-shadow: 3px 4px 4px black;
 	
-
-
-}
-.gallary .image2 img{
-	width: 140px;
-	height: 150px;
-	margin: 10px;
-	box-shadow: 3px 4px 4px black;
-
-}
-.gallary .image3 img{
-	width: 180px;
-	height: 120px;
-	margin: 10px;
-	box-shadow: 3px 4px 4px black;
+	
 	
 
-
 }
-.gallary .image4 img{
-	width: 140px;
-	height: 130px;
+.gallary .image2 {/* size of an image determined*/
+	width: 230px;
+	height: 250px;
 	margin: 10px;
+	color: white;
+	background-color: black;
 	box-shadow: 3px 4px 4px black;
 
-
 }
+
+
 
 .gallary2{
 	flex: 1;
@@ -173,33 +173,33 @@ nav ul li a:hover{
 }
 
 
-.gallary2 .image5 img{
-	width: 140px;
+.gallary2 .image5 img{/* size of an image determined*/
+	width: 170px;
 	height: 120px;
 	margin: 10px;
 	box-shadow: 3px 4px 4px black;
 	
 
 }
-.gallary2 .image6 img{
-	width: 140px;/*width of an image */
-	height: 140px;/*height of an image */
-	margin: 10px;/*to seprate image apart */
+.gallary2 .image6 img{/* size of an image determined*/
+	width: 170px;
+	height: 140px;
+	margin: 10px;
 	box-shadow: 3px 4px 4px black;/* giving shadow to image*/
 
 
 
 }
-.gallary2 .image7 img{
-	width: 140px;/*width of an image */
-	height: 150px;/*height of an image */
-	margin: 10px;/*to seprate image apart */
-	box-shadow: 2px 3px 3px black;/*giving shadow to image */
+.gallary2 .image7 img{/* size of an image determined*/
+	width: 170px;
+	height: 150px;
+	margin: 10px;
+	box-shadow: 2px 3px 3px black;
 	
 
 
 }
-.gallary2 .image8 img{
+.gallary2 .image8 img{/* size of an image determined*/
 	width: 180px;
 	height: 130px;
 	margin: 10px;
@@ -207,14 +207,16 @@ nav ul li a:hover{
 
 }
 
-.contact{
+.contact{ /*contact page is set to row form*/
+	grid-row: 3/4;
+	grid-column: 1/3;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 
 }
-/*Contact page design.*/
+
 .contact img{
 	width: 150px;
 }
@@ -223,37 +225,38 @@ nav ul li a:hover{
 	width: 6px;
 	background: white;
 }
-/* a card is added*/
-.contact .card{
+
+.contact .card{/* card is created in top of form*/
 	display: flex;
 	margin: 10px;
 	border:1px solid black;
 	box-shadow: 2px 3px 3px ;
 	background: orange;
 }
-/* Form created*/
-form{
-	flex: 1;	
+
+form{ /* two divs are set in column*/
+	grid-row: 4/5;
+	grid-column: 1/3;	
 	text-align: center;
 	display: flex;
 	
 	align-items: center;
 	
 }
-.fill{
+.fill{ /* set to left hand side*/
 	margin: 20px;
 	flex: 1;
 	box-shadow: 3px 4px 4px;
 }
-.msg{
+.msg{/* set to right hand side*/
 	flex: 1;
 
 }
-.msg p{
+.msg p{  /* design for letters*/
 	font-family: cursive;
 	font-size: 20px;
 	color: white;
-	animation: change 3s linear infinite;
+	animation: change 3s linear infinite;/*animation for letters created*/
 }
 @keyframes change{
 
@@ -271,20 +274,25 @@ form{
 	padding: 5px;
 	border-radius: 7px 7px 7px 7px;
 }
+.con {
+	grid-row: 5/6;
+	grid-column: 1/3;
+}
 
-/* CV page begins.*/
 
-.cv{
+.cv{ /* divs are set into row*/
+	grid-row: 3/4;
+	grid-column: 1/3;
 	display: flex;
 	flex-direction: column;
 	
 }
-.cv img{
+.cv img{ /* size of an image is determined*/
 	width: 200px;
 	margin: auto;
 	border-radius: 50%;
 }
-.cv .terms{
+.cv .terms{ /* descriptions were set in column form*/
 	display: flex;
 	text-align: center;
 	margin: 5px;
@@ -322,12 +330,12 @@ form{
 	font-family: cursive;
 	
 }
-/* This one is for editing my skills.*/
+
 .language{
 	box-shadow: 2px 3px 3px ;
 
 }
-.java,.javascript,.php{
+.java,.javascript,.php{/* editing my programming language skills*/
 	display: flex;
 	justify-content: center;
 	align-content: center;
@@ -335,14 +343,14 @@ form{
 
 }
 
- .know{
+ .know{ /*editing white line  */
 	width: 100px;
 	height: 10px;
 	background: black;
 	border-radius: 0px 0px 3px 3px;
 	
 }
-.didnt{
+.didnt{/*editing black line  */
 	width: 27px;
 	height: 10px;
 	background: white;
@@ -350,19 +358,28 @@ form{
 	border-radius: 3px 3px;
 
 }
-/* Necessary footer area.*/
+.intro h1{
+	text-align: center;
+}
+.intro p{
+	margin: 5px;
+}
 
-footer{
+
+
+footer{  /*footer area added with background */
+	grid-row:4/5; 
+	grid-column:1/3;
 	background: black;
 	display: flex;
 	justify-content: center;
 
 }
-footer img{
+footer img{  /*designing image of footer area  */
 	border-radius: 50%;
 	width: 200px;
 }
-footer .about-text{
+footer .about-text{ /*designing description of footer area  */
 	font-family: cursive;
 	color: white;
 	text-align: center;
@@ -377,28 +394,28 @@ footer .space{
 
 
 /*media queary*/
-@media screen and ( max-width: 500px){
+@media screen and ( max-width: 500px){ /*responsive design  */
    body{
-   	display: block;
+   	display: block; /*body is shown in vertical manner */
    }
 	nav ul{
-	flex-direction: column;
-	display: none;
+	flex-direction: column;/*body is shown in vertical manner */
+	display: none;         /*doesn't display in mobile */
 	background-color: linear-gradient(black,white);	
   }
 
-nav ul li a{
+nav ul li a{ /*buttons are modified */
 	margin: 10px;
 	background-color: white;
 	color: black;
 	
 }
 nav ul li{
-	padding: 10px;
+	padding: 10px;/*giving space between buttons */
 
 }
 
- #checkbox:checked + ul {
+ #checkbox:checked + ul { /*displaying menu onclick of checkbox */
 	display: block;
 	 }
 
@@ -408,20 +425,20 @@ nav ul li{
    section{
    	display: block;
    }
-   footer{
+   footer{ /*footer is shown in vertical manner */
    	display: block;
    }
    .photos{
-   	display: block;
+   	display: block;/*photos is shown in vertical manner */
    }
    .gallary{
-   	display: block;
+   	display: block;/*gallary is shown in vertical manner */
    }
    .gallary2{
-   	display: block;
+   	display: block;/*gallary2 is shown in vertical manner */
    }
    form{
-   	display: block;
+   	display: block;/*form is shown in vertical manner */
    }
 
    .terms{
