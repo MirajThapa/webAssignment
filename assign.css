@@ -2,14 +2,14 @@ body{
 	margin: 0px;    
 	padding: 0px;
 	display: grid;
-	background-image: linear-gradient(black,white);/*background image created */
+	background-image: linear-gradient(black,white);/*(CodingNepal,2020) */
 	background-repeat: no-repeat;/* no repetation of background*/
 	background-attachment: fixed;/*background can't be moved */
 	background-size: cover;/*to cover all the body  */
 	
 }
 header{
-	grid-row: 1/2;
+	grid-row: 1/2;/* (Thapa Technical,2019)*/
 	grid-column: 1/3;
 	
 	padding:7px;
@@ -18,16 +18,16 @@ header{
 	color: white;
 
 	animation: change 2s linear infinite;/* animation is done*/
-	animation-duration: 4s; /*duration of animation is given */
+	animation-duration: 4s; /*animation time period */
 }
 /*menu for all*/
 nav{
 	grid-row: 2/3;
 	grid-column:1/3; 
-}
+}/* (Thapa Technical,2019)*/
 
 nav ul{
-	display: flex;/*to display body child horizontally */
+	display: flex;/*(Traversy Media,2016) */
 	justify-content: center;/*arranging header in center vertically */
 	background-color: black;/*background color for menu is given */
 	padding: 14px;
@@ -51,10 +51,10 @@ nav ul li a{
 nav ul li a:hover{
 	border-radius: 2px 3px 3px 3px;/* border is curved*/
 	background-color: white;/*background becomes white */
-	color: black;/*color of text becomes black */
-}
+	color: black;
+}/*(CodingNepal,2021) */
 #checkbox {
-	display: none;/*checkbox is removed for desktop version */
+	display: none;/*(JP Web,2018) */
 }
 .box{
 	background-color: black;/*background is given black */
@@ -77,15 +77,12 @@ nav ul li a:hover{
 	justify-content: center;/* arranging header in center vertically*/
 	align-items: center;/*arranging header in center horizontally */
 
-
-}
+}  /*(JP Web,2018) */
 .box label span{
-	background-color: black;/*background of span */
-	height: 4px;/*height of lines in hamburgur menu */
-	width: 80%;/* width of lines in hamburgur menu*/
+	background-color: black;
+	height: 4px;
+	width: 80%;
 	margin: 3px;
-
-
 
 }
 .box{
@@ -97,13 +94,11 @@ nav ul li a:hover{
 main .int{
 	grid-row: 3/4;
 	grid-column: 2/3;
-
-
 	text-align: center;
-}
+}/* (Thapa Technical,2019)*/
 
 .int img{
-	width: 200px;/* width of image*/
+	width: 200px;
 	border-radius: 50%;/*image rounded */
 	
 
@@ -199,13 +194,6 @@ main .int{
 
 
 }
-.gallary2 .image8 img{/* size of an image determined*/
-	width: 180px;
-	height: 130px;
-	margin: 10px;
-	box-shadow: 3px 4px 4px black;
-
-}
 
 .contact{ /*contact page is set to row form*/
 	grid-row: 3/4;
@@ -227,7 +215,7 @@ main .int{
 }
 
 .contact .card{/* card is created in top of form*/
-	display: flex;
+	display: flex;/*(Traversy Media,2016) */
 	margin: 10px;
 	border:1px solid black;
 	box-shadow: 2px 3px 3px ;
@@ -242,8 +230,8 @@ form{ /* two divs are set in column*/
 	
 	align-items: center;
 	
-}
-.fill{ /* set to left hand side*/
+}/* (Thapa Technical,2019)*/
+.fill{ 
 	margin: 20px;
 	flex: 1;
 	box-shadow: 3px 4px 4px;
@@ -277,26 +265,26 @@ form{ /* two divs are set in column*/
 .con {
 	grid-row: 5/6;
 	grid-column: 1/3;
-}
+}/* (Thapa Technical,2019)*/
 
 
-.cv{ /* divs are set into row*/
+.cv{ 
 	grid-row: 3/4;
 	grid-column: 1/3;
-	display: flex;
+	display: flex;/*(Traversy Media,2016) */
 	flex-direction: column;
 	
-}
-.cv img{ /* size of an image is determined*/
+}/* (Thapa Technical,2019)*/
+.cv img{ 
 	width: 200px;
 	margin: auto;
 	border-radius: 50%;
 }
-.cv .terms{ /* descriptions were set in column form*/
+.cv .terms{ 
 	display: flex;
 	text-align: center;
 	margin: 5px;
-}
+}/*(Traversy Media,2016) */
 
 .cv .terms .skills{
 	flex: 1;
@@ -367,15 +355,15 @@ form{ /* two divs are set in column*/
 
 
 
-footer{  /*footer area added with background */
+footer{  
 	grid-row:4/5; 
 	grid-column:1/3;
 	background: black;
-	display: flex;
+	display: flex;/*(Traversy Media,2016) */
 	justify-content: center;
 
-}
-footer img{  /*designing image of footer area  */
+}/* (Thapa Technical,2019)*/
+footer img{  
 	border-radius: 50%;
 	width: 200px;
 }
@@ -390,6 +378,34 @@ footer .space{
 	width: 3px;
 	margin: 5px;
 }
+.intro{
+	grid-row: 3/4;
+	grid-column: 1/3;
+
+}
+.validation1{
+	margin: 20px;
+	display: flex;
+
+	justify-content: space-around;
+	grid-row: 4/5;
+	grid-column: 1/3;
+
+}/* (Thapa Technical,2019)*/
+.validation2{
+	margin: 20px;
+	display: flex;
+	justify-content: space-around;
+	grid-row: 5/6;
+	grid-column: 1/3;
+}/* (Thapa Technical,2019)*/
+.validation1 img{
+	width: 300px;
+}
+
+.validation2 img{
+	width: 300px;
+}
 
 
 
@@ -399,9 +415,9 @@ footer .space{
    	display: block; /*body is shown in vertical manner */
    }
 	nav ul{
-	flex-direction: column;/*body is shown in vertical manner */
+	flex-direction: column;
 	display: none;         /*doesn't display in mobile */
-	background-color: linear-gradient(black,white);	
+	background: linear-gradient(black,white);	
   }
 
 nav ul li a{ /*buttons are modified */
@@ -417,7 +433,7 @@ nav ul li{
 
  #checkbox:checked + ul { /*displaying menu onclick of checkbox */
 	display: block;
-	 }
+	 } /* (JP Web,2018)*/
 
 	 .box{
 	 	display: flex;
@@ -452,5 +468,12 @@ nav ul li{
    	display:flex;
    	flex-direction: column;
 
+   }
+
+   .validation1{
+   	display: block;
+   }
+   .validation2{
+   	display: block;
    }
 }
